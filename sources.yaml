@@ -1,0 +1,365 @@
+# 漏洞公告采集源清单 — 全部已纳入每日采集
+# 维护规则：新源只能由每日任务核实可达、能发 CVE/公告后才加进来，写清 date_added 和验证方式。
+# tier: A=机器可读API/JSON（脚本直拉） B=厂商PSIRT RSS/页面（agent每天查） C=研究者第一手（agent每天搜） D=中文源/聚合（脚本+agent）
+# status: active / needs_key / rss_only / manual_check
+version: 1
+updated: 2026-11-10
+kb_dir: workspace/knowledge-base/fujiang-pojia-knowledge
+seen_file: workspace/knowledge-base/seen.json
+
+tier_a_api:
+  - name: NVD API 2.0
+    url: https://services.nvd.nist.gov/rest/json/cves/2.0
+    kind: api_json
+    note: 按 pubStartDate 拉过去48h，CVSS>=7.0；无key限速 5次/30秒，脚本单次请求
+    status: active
+  - name: CISA Known Exploited Vulnerabilities (KEV)
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    kind: json_feed
+    note: 在野利用目录，dateAdded 近7天未入库的全部收，不看CVSS
+    status: active
+  - name: CVE.org / CVE API
+    url: https://cveawg.mitre.org/api/cve/CVE-YYYY-NNNNN
+    kind: api_json
+    note: CVE记录本身比NVD早几天，用于补描述和参考链接；按CVE号逐个查
+    status: active
+  - name: GitHub Advisory Database (GHSA)
+    url: https://api.github.com/advisories
+    kind: api_json
+    note: 开源组件最快，published过去48h，severity critical/high；无key 60次/小时
+    status: active
+  - name: EUVD (ENISA European Vulnerability Database)
+    url: https://euvd.enisa.europa.eu/api/vulnerability
+    kind: api_json
+    note: 欧洲库，常有NVD之外的EPSS/KEV标注
+    status: active
+  - name: CIRCL Vulnerability-Lookup
+    url: https://vulnerability.circl.lu/api/last
+    kind: api_json
+    note: 聚合85个源，含CNVD/CNNVD镜像，用于补中文源和冷门源
+    status: active
+  - name: FIRST EPSS
+    url: https://api.first.org/data/v1/epss
+    kind: api_json
+    note: 只作排序参考，不单独入库：EPSS>0.5 或进KEV的优先
+    status: active
+
+tier_b_vendor_psirt:
+  - name: Cisco PSIRT openVuln API
+    url: https://apix.cisco.com/security/advisories/v2/all
+    kind: api_needs_key
+    note: API需申请key，未配key前用RSS/公告页人工核查；agent每天查新公告
+    status: needs_key
+  - name: Cisco PSIRT 公告页/RSS
+    url: https://www.cisco.com/c/en/us/support/web/rss.html
+    kind: rss
+    status: active
+  - name: Microsoft MSRC / CVRF API
+    url: https://api.msrc.microsoft.com/cvrf/v2.0/updates
+    kind: api_json
+    note: 每月补丁星期二+紧急带外
+    status: active
+  - name: Fortinet PSIRT
+    url: https://www.fortiguard.com/psirt
+    kind: rss_page
+    note: FG-IR编号，边界设备重点
+    status: active
+  - name: Palo Alto Networks PSIRT
+    url: https://security.paloaltonetworks.com/
+    kind: rss_page
+    status: active
+  - name: VMware / Broadcom VMSA
+    url: https://support.broadcom.com/web/ecx/security-advisory
+    kind: rss_page
+    status: active
+  - name: Ivanti Security Advisories
+    url: https://forums.ivanti.com/s/article/Security-Advisories
+    kind: page
+    status: active
+  - name: Citrix / NetScaler Security Bulletins
+    url: https://support.citrix.com/article/CTX-security-bulletins
+    kind: page
+    status: active
+  - name: F5 Security Advisories
+    url: https://my.f5.com/manage/s/article/K000140000
+    kind: page
+    status: active
+  - name: Check Point Security Advisories
+    url: https://support.checkpoint.com/results/sk/sk182474
+    kind: page
+    status: active
+  - name: Atlassian Security Advisories
+    url: https://confluence.atlassian.com/security/atlassian-security-advisories
+    kind: rss_page
+    status: active
+  - name: GitLab Security Releases
+    url: https://about.gitlab.com/releases/categories/releases/
+    kind: rss_page
+    status: active
+  - name: Jenkins Security Advisories
+    url: https://www.jenkins.io/security/advisories/
+    kind: rss_page
+    status: active
+  - name: Apache Security / Projects
+    url: https://www.apache.org/security/
+    kind: page
+    status: active
+  - name: Spring / VMware Tanzu Security
+    url: https://spring.io/security
+    kind: rss_page
+    status: active
+  - name: Oracle Critical Patch Updates (CPU)
+    url: https://www.oracle.com/security-alerts/
+    kind: page
+    note: 每季度，含Java/WebLogic
+    status: active
+  - name: JetBrains Security Bulletins
+    url: https://www.jetbrains.com/privacy-security/issues-fixed/
+    kind: page
+    status: active
+  - name: Ubuntu Security Notices (USN)
+    url: https://ubuntu.com/security/notices
+    kind: rss
+    status: active
+  - name: Debian Security Advisories (DSA)
+    url: https://www.debian.org/security/
+    kind: rss
+    status: active
+  - name: Red Hat Security Advisories (RHSA)
+    url: https://access.redhat.com/security/security-updates/
+    kind: rss
+    status: active
+  - name: SUSE Security Updates
+    url: https://www.suse.com/support/update/
+    kind: rss
+    status: active
+  - name: Google Cloud / AWS / Azure 安全公告
+    url: https://cloud.google.com/support/bulletins
+    kind: rss_page
+    note: AWS Security Bulletins, Azure Service Health / MSRC 同源
+    status: active
+  - name: Linux Kernel / oss-security 邮件列表
+    url: https://www.openwall.com/lists/oss-security/
+    kind: mailing_list
+    status: active
+  - name: Zimbra / Veeam / GoAnywhere / PaperCut 等厂商公告页
+    url: https://www.veeam.com/kb-articles.html
+    kind: page
+    note: 按库里已有的产品逐个盯，见 README 的产品清单
+    status: active
+
+tier_c_researchers_first_hand:
+  - name: Google Project Zero
+    url: https://googleprojectzero.blogspot.com/
+    kind: blog_rss
+    note: 在野0day第一手
+    status: active
+  - name: Trend Micro Zero Day Initiative (ZDI)
+    url: https://www.zerodayinitiative.com/advisories/published/
+    kind: rss_page
+    status: active
+  - name: GitHub Security Lab
+    url: https://securitylab.github.com/advisories/
+    kind: rss_page
+    status: active
+  - name: Rapid7 Blog / Metasploit
+    url: https://www.rapid7.com/blog/
+    kind: blog_rss
+    status: active
+  - name: Horizon3.ai Attack Research
+    url: https://www.horizon3.ai/attack-research/
+    kind: blog_rss
+    status: active
+  - name: watchTowr Labs
+    url: https://labs.watchtowr.com/
+    kind: blog_rss
+    status: active
+  - name: Wiz Blog
+    url: https://www.wiz.io/blog
+    kind: blog_rss
+    status: active
+  - name: Volexity Blog
+    url: https://www.volexity.com/blog/
+    kind: blog_rss
+    status: active
+  - name: Mandiant Blog
+    url: https://www.mandiant.com/resources/blog
+    kind: blog_rss
+    status: active
+  - name: Synacktiv Blog
+    url: https://www.synacktiv.com/en/publications
+    kind: blog_rss
+    status: active
+  - name: DEVCORE
+    url: https://devco.re/blog/
+    kind: blog_rss
+    note: Orange Tsai 团队
+    status: active
+  - name: Snyk Vulnerability DB / Blog
+    url: https://snyk.io/vuln/
+    kind: page_api
+    status: active
+  - name: HackerOne Hacktivity（已公开报告）
+    url: https://hackerone.com/hacktivity
+    kind: page
+    status: active
+  - name: 开发者/团队个人发布 — 开源项目维护者自发 Security Advisory
+    url: https://github.com/advisories
+    kind: git_rss
+    note: 2026-11-10 用户确认要收。项目维护者自己发的 GHSA、release notes、安全修复提交，常常比 NVD 早；按 CVE 号+产品+版本核实后入库
+    status: active
+  - name: 开发者/团队个人发布 — 独立开发者个人仓库/博客
+    url: https://github.com/search?q=CVE+security+advisory
+    kind: social_search
+    note: 2026-11-10 用户确认要收。独立开发者个人 GitHub 仓库、个人博客、X/微博个人账号发的 PoC/分析；只看可复现，不看名气大小
+    status: active
+  - name: 开发者/团队个人发布 — 小团队/实验室/大学/CTF 队
+    url: https://github.com/search?q=vulnerability+disclosure+team
+    kind: social_search
+    note: 2026-11-10 用户确认要收。小团队、大学实验室、CTF 队、独立安全实验室的博客/公众号/GitHub org；每天发现时按名+链接核实后加进清单
+    status: active
+  - name: 开发者/团队个人发布 — 开源项目 SECURITY.md / Issue 认领
+    url: https://github.com/search?q=SECURITY.md+CVE
+    kind: social_search
+    note: 2026-11-10 用户确认要收。项目 SECURITY.md、issue 里维护者认领的 CVE、修复 PR；有 CVE 号或产品+版本+步骤才入库
+    status: active
+  - name: oss-security / Full Disclosure / Seclists
+    url: https://seclists.org/fulldisclosure/
+    kind: mailing_list
+    status: active
+  - name: X / Twitter 安全研究者（动态发现）
+    url: https://x.com/search?q=CVE%20vulnerability%20disclosure
+    kind: social_search
+    note: 不固定账号，每天用 social.search / browser.search 搜过去24h新披露的研究者，按姓名+链接核实后加进 discovery log
+    status: active
+  - name: 微博 安全研究者（动态发现）
+    url: https://s.weibo.com/weibo?q=CVE%E6%BC%8F%E6%B4%9E
+    kind: social_search
+    note: 同上，搜过去24h中文披露，核实原帖和厂商公告后再入库，不只凭微博一句话入库
+    status: active
+  - name: GitHub 新 PoC / Advisory（动态发现）
+    url: https://github.com/search?q=CVE-2026+PoC
+    kind: social_search
+    note: 每天搜新CVE号+PoC，PoC只作第二天补充，不当天入库为已验证
+    status: active
+
+tier_d_chinese_and_aggregators:
+  - name: CNVD 国家信息安全漏洞共享平台
+    url: https://www.cnvd.org.cn/
+    kind: page_no_api
+    note: 国内产品0day常最早，无官方API，走CIRCL镜像+每周公告页核查
+    status: active
+  - name: CNNVD 国家信息安全漏洞库
+    url: https://www.cnnvd.org.cn/
+    kind: page_no_api
+    note: 同上，月报16278条量级，只收高危/超危
+    status: active
+  - name: Seebug 知道创宇
+    url: https://www.seebug.org/
+    kind: page
+    status: active
+  - name: 安全客 / FreeBuf（资讯线索）
+    url: https://www.anquanke.com/
+    kind: news
+    note: 只作线索，必须回到厂商/NVD核实才入库
+    status: active
+  - name: Exploit-DB
+    url: https://www.exploit-db.com/
+    kind: page_api
+    note: PoC第二天补
+    status: active
+  - name: Packet Storm Security
+    url: https://packetstormsecurity.com/
+    kind: rss
+    status: active
+  - name: Nuclei Templates (ProjectDiscovery)
+    url: https://github.com/projectdiscovery/nuclei-templates
+    kind: git
+    note: 每天看新模板对应的CVE，补检测指纹
+    status: active
+  - name: The Hacker News / BleepingComputer / Krebs on Security（资讯线索）
+    url: https://thehackernews.com/
+    kind: news_rss
+    note: 只作线索，必须回到一手源核实
+    status: active
+  - name: CISA Advisories / ICS Advisories
+    url: https://www.cisa.gov/news-events/cybersecurity-advisories
+    kind: rss_page
+    status: active
+  - name: CERT/CC Vulnerability Notes
+    url: https://www.kb.cert.org/vuls/
+    kind: rss
+    status: active
+
+tier_e_apk_exe_reverse:
+  - name: Android Security Bulletin（每月）
+    url: https://source.android.com/docs/security/bulletin
+    kind: rss_page
+    note: 2026-11-10 用户新增 APK 方向。Android 系统 + 厂商补丁，每月
+    status: active
+  - name: OWASP MASVS / MSTG / Mobile Top 10
+    url: https://mas.owasp.org/
+    kind: page_git
+    note: 2026-11-10 用户新增 APK 方向。移动应用安全标准与测试方法，作分类与核实依据
+    status: active
+  - name: Google Play / Android CVE（经 NVD/GHSA）
+    url: https://services.nvd.nist.gov/rest/json/cves/2.0
+    kind: api_json
+    note: 2026-11-10 用户新增 APK 方向。脚本按 android/apk 关键词分到 mobile-rev
+    status: active
+  - name: MobSF / Exodus Privacy（APP 静态分析）
+    url: https://github.com/MobSF/Mobile-Security-Framework-MobSF
+    kind: git
+    note: 2026-11-10 用户新增 APK 方向。工具更新 + 检测规则
+    status: active
+  - name: JADX / APKTool / Frida（APK 逆向工具）
+    url: https://github.com/skylot/jadx
+    kind: git
+    note: 2026-11-10 用户新增 APK 方向。工具发布、新反混淆/脱壳手法；另盯 APKTool、Frida、objection
+    status: active
+  - name: Microsoft MSRC — Windows / EXE
+    url: https://msrc.microsoft.com/
+    kind: api_json
+    note: 2026-11-10 用户新增 EXE 方向。Windows 可执行文件漏洞，经 NVD 按 windows/pe 关键词分到 binary-rev
+    status: active
+  - name: Ghidra / IDA / x64dbg / Radare2 / Binary Ninja（逆向工具）
+    url: https://github.com/NationalSecurityAgency/ghidra
+    kind: git
+    note: 2026-11-10 用户新增 EXE 方向。工具发布、新分析手法；另盯 x64dbg、Radare2、Binary Ninja
+    status: active
+  - name: REA 逆向分析工具（富江技能库上游）
+    url: https://github.com/morluto/rea
+    kind: git
+    note: 2026-11-10 用户新增逆向方向。富江技能库已含 REA，工具更新同步跟
+    status: active
+  - name: Reverse Engineering 论坛/聚合 — Reddit r/ReverseEngineering / StackExchange
+    url: https://www.reddit.com/r/ReverseEngineering/
+    kind: forum_rss
+    note: 2026-11-10 用户新增逆向方向。只作线索，须回原文核实可复现才入库
+    status: active
+  - name: 逆向论坛中文 — 看雪论坛 / 吾爱破解
+    url: https://bbs.kanxue.com/
+    kind: forum
+    note: 2026-11-10 用户新增逆向方向。看雪、吾爱破解的 APK/EXE 逆向分析、脱壳、工具发布；只作线索，须回原文核实
+    status: active
+  - name: XDA Developers（Android 应用/系统）
+    url: https://www.xda-developers.com/
+    kind: news_forum
+    note: 2026-11-10 用户新增 APK 方向。Android 应用漏洞、Root/解锁、逆向分析线索
+    status: active
+  - name: Awesome Reverse Engineering / Awesome Android Security（GitHub 清单）
+    url: https://github.com/0x2A/awesome-reverse-engineering
+    kind: git
+    note: 2026-11-10 用户新增逆向方向。清单更新可发现新工具/新源
+    status: active
+
+# 每日新源发现 — 见 SOURCES_DISCOVERY.md
+# 发现渠道（每天都要跑，至少2条搜索）：
+# 1. browser.search: "new vulnerability disclosure CVE-2026" / "CVE-2026 PoC GitHub" / "0day disclosed"
+# 2. browser.search zh: "新披露漏洞 CVE 厂商公告" / "0day 漏洞 公开"
+# 3. social.search: X/微博/GitHub 过去24h的 CVE 披露
+# 4. 从当天新入库的CVE反查：它的 references 里出现的新厂商/研究者域名，核实后加源
+# 纳入标准（2026-11-10 改后）：只有1条硬门槛——可复现/可核实（有CVE号，或厂商公告，或详细PoC+产品+版本可复核）。
+# CVE号不是必须的：底库59条无CVE（cve: 无（业务逻辑/实现缺陷/配置缺陷）），无CVE用 YYYY-MM-DD-产品-类型.md 文件名+ cve: 无（原因）写法。
+# 公开可达/30天内更新/覆盖方向清楚不是门槛：前者是核实前提（看不到全文先记待核实），后两者只决定盯的频率和分类标签。
+# 不纳入：纯转载/营销号、只有截图无链接无产品版本、假PoC（无产品无版本无步骤）。

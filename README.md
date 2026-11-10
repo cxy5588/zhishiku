@@ -1,1 +1,25 @@
-# zhishiku
+# 漏洞知识库（本地）
+
+- 底库：`fujiang-pojia-knowledge/`，167 条，2026-11-10 从 FJNB5/fujiang-pojia 的 `plugin/knowledge/` 复制来，格式不变；2026-11-10 新增 `mobile-rev/`（APK/Android 逆向）和 `binary-rev/`（EXE/PE 逆向）两个分类，各 0 条起步。
+- 总数口径（v2，2026-11-10）：总文件 217 = 分类目录 184（已核实） + `incoming/` 33（candidate 候选，不计入已核实数）。脚本写的新条目一律先是 candidate，进 incoming/，人工核验后才移进分类并改 `status: verified, source_verified: true`。
+- 每日新增（v2，`collect_daily.py`）：NVD 发布窗口（上次成功 -1 天重叠，最多 7 天，默认 2 天，分页，无 CVSS 硬过滤）+ CISA KEV 完整目录快照对比 + GitHub Advisories（reviewed/unreviewed 两路，`modified` 筛选，`sort=updated`）。排序：KEV > EPSS≥0.5 > CVSS > 发布时间。PoC 不编造，`verified: false`，新字段 `source_verified` / `repro_tested` / `first_seen` / `source_published` / `last_verified` / `aliases` / `epss` / `kev` / `vendor_original` / `cpe_clues`（CPE 只作线索）。
+- 收录两道门（2026-11-10）：门 1 可信 + 门 2 有实际影响（泄露/篡改、账号或权限接管、服务中断、服务器被控，或可组合成上述影响）。轻微信息暴露/缺响应头/版本横幅/理论配置建议、无明确攻击路径的不进常用库，只记 `clues.md` 一行（可串攻击链的保留为关联线索）。脚本自动分流 impact=high/review/low，low 须同时满足 CVSS<4 或未评分 + 轻微关键词 + 无敏感数据 + 无高危 CWE/关键词 + 非 KEV + EPSS<0.1。实测 NVD 48h 915 条：high 639（70%）、review 276（30%）、low 0——自动排除砍得不多，过滤主要在人工门 2。
+- 上限与溢出：不限量（2026-11-10 用户定，`--max 0` 默认）。`overflow.json` 只作 `--max` 显式设置时的安全网，日常为空。2026-11-10 用户定只收最高风险：CVE 侧 CVSS ≥ 9.0 或 KEV，逆向侧 Critical/High，低于线的不写卡、记 seen 过滤。实测 2 天窗口写 77 条（每天约 38-39 条）+ 过滤 866 条，逆向高危每天约 1-2 条，合计每天约 40 条，人工核验跟得上。CVE.org 产品补全每轮只补前 100 条，其余留待人工核验时补。
+- NVD 补采：日常窗口 7 天；停跑超过 7 天时，按发布日期每 7 天分段补采，直到追平，再恢复日常窗口。不做全量 lastMod 扫表。
+- 来源分级：A=多类证据互相支持（≥2 独立类别），B=单一权威原始来源（厂商公告单独、CVE/NVD 单独、GHSA reviewed 单独）或充分具体的研究者证据（有可复核 PoC 但没有厂商公告），C=GHSA unreviewed/单一帖子/社交。等级表示证据来源，不代替两道门。NVD+CVE.org 算 1 个来源（同一 CNA 记录），不是两个独立证据；独立证据分原始公告、独立技术分析、PoC 三类，各自记支持了什么。GHSA 按 GHSA ID 去重，reviewed 胜出，reviewed 是可信度不是严重度。
+- EPSS：未来 30 天被利用的概率（0-1），不是影响大小，不替代门 2；存 `epss` + `epss_date`，只做优先级信号；`epss_date` 超过 30 天视为过期，排序时不再用，处理到该条目时重新抓。
+- 产品补全公平队列：每轮只补 100 条（新条目 50 + 已入库待补全 50），其余进 `enrich_queue.json`；KEV/高影响优先，每轮至少 20% 名额给最旧待补全条目（老化轮转），避免排后面的永远处理不到。
+- 故障恢复：NVD 游标只在全部分页抓完且文件落盘后才推进；中途失败不推进，重跑幂等（seen + 文件已存在检查挡重复）。
+- 统计分开：采集（原始命中/唯一候选/候选数）与核验（待核验/已核实/低影响排除）与待补全分开报；无限量采集 ≠ 无限量核验，候选增长 ≠ 常用库增长。
+- 轻量候选：完整候选卡只给满足优先条件的条目（KEV / impact=high / CVSS≥7 / source_grade=A）；这四个只是生成完整候选卡的优先条件，不是已通过门 1 / 门 2，所有条目仍是 status=candidate、verified:false，未核实；其余低优先级未核验条目只存 `incoming_index.json` 里一条轻量索引记录（必要元数据，无占位正文），核验通过后用 `python3 collect_daily.py --materialise CVE-...` 生成完整候选卡。待核验数 = 完整候选卡数 + 轻量索引条数，分开报。
+- 故障恢复：持久化顺序 ①完整候选卡+索引 → ②overflow.json → ③seen.json → ④sync_state.json（游标最后），全部原子写（临时文件+fsync+rename）；故障注入点 `KB_FAULT_INJECT`（after_candidates / before_overflow / before_seen / before_state / after_state）已在隔离副本上五点全部实测，游标只在 after_state 已推进（预期），其余四点均不提前推进，重跑无重复、无丢失。注：上一轮代码实际是 seen 先于 overflow，与文档相反，已修正为与文档一致。
+- 计数口径：日报分开列原始命中、唯一条目、重复数、候选数、待核验数。澄清：639 high + 276 review = 915 是 NVD 原始命中、去重之前；去重之后是 859 条唯一新候选。
+- APK/EXE 存储边界：知识卡只记哈希、版本、证据位置、来源链接；不提交原始闭源样本、完整反编译输出、敏感数据。`entry_type=vuln`（漏洞卡）与 `entry_type=method`（方法卡）分开，方法卡不要写成已确认漏洞。
+- 不做全量 lastMod 扫表：实测 lastMod 2 天 3299 条、pub30 天+lastMod 7 天约 7000 条/16 页，全是旧记录重新富化；实质性更新由 KEV 快照、GHSA updated、每日 PSIRT 复核抓。有 NVD API key 后再重开。
+- 分类：共 11 个，脚本只给 `suggested_category`，人工核验后归类。
+- 源清单：`sources.yaml` 共 74 个源（Tier A API / B 厂商PSIRT / C 研究者第一手 / D 中文源+聚合 / E APK-EXE逆向）。
+- 新源发现：见 `SOURCES_DISCOVERY.md`，每天搜厂商/研究者/微博/GitHub/X，核实后加源。
+- 去重：`seen.json`，主键 CVE 号，无 CVE 的用厂商公告 ID / GHSA / 原始 URL / 产品+类型；同一 CVE 多产品/多公告记 `aliases` + 逐源观察。
+- 变更：旧 CVE 被修改/撤回时不追加新文件，在原文件改字段并加 `## 变更记录`；撤回标 `status: withdrawn`。
+- 日志：`logs/YYYY-MM-DD.json`（分源成功/失败、命中/去重/写入/溢出、分页是否完成、最后成功时间）+ `logs/YYYY-MM-DD-discovery.md`（新源发现）。`kev_snapshot.json` / `sync_state.json` / `overflow.json` 是脚本状态文件。
+- 定时任务：每天 09:00（Asia/Shanghai），任务 id `vuln-kb-daily-collect`，结果发回本聊天（渗透知识库采集）。

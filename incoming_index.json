@@ -1,0 +1,148 @@
+[
+  {
+    "cve": "无（方法卡）",
+    "title": "PE mapped inside carrier DLL (module overloading technique)",
+    "severity": "",
+    "cvss": "",
+    "product": "Windows PE / DLL",
+    "versions": "",
+    "impact": "review",
+    "source_grade": "B",
+    "kev": false,
+    "first_seen": "2026-11-10",
+    "source_published": "2026-11-02",
+    "refs": [
+      "https://www.instagram.com/reel/DfWsALhsY9D/"
+    ],
+    "aliases": [],
+    "observations": [
+      "Nov 2 GitHub Pages defensive research: full PE replacement inside legitimate DLL, 7-step attack path"
+    ],
+    "desc": "恶意 PE 映射进合法 DLL 载体（module overloading）：将合法系统 DLL 以 SEC_IMAGE 映射，覆写载体头与节、重定位、解析导入、调用恶意入口点，以合法文件身份运行。防御研究。",
+    "sources_label": "Threadlinqs intel 2026-11-05",
+    "status": "candidate-light",
+    "entry_type": "method",
+    "suggested_category": "binary-rev"
+  },
+  {
+    "cve": "无（方法卡）",
+    "title": "Frida Firebase Cloud Functions bypass (BSidesSF 2026)",
+    "severity": "",
+    "cvss": "",
+    "product": "Android app (Firebase)",
+    "versions": "",
+    "impact": "review",
+    "source_grade": "B",
+    "kev": false,
+    "first_seen": "2026-11-10",
+    "source_published": "2026",
+    "refs": [
+      "https://github.com/angusdevgo/seep-reverse-lab/blob/HEAD/Tool/skill/safe-skills/reverse-engineering/languages-platforms.md"
+    ],
+    "aliases": [],
+    "observations": [
+      "BSidesSF 2026: Frida hook post-login, call Cloud Function directly with arbitrary params"
+    ],
+    "desc": "Android 应用经 Firebase Cloud Functions 校验操作（二维码、购买等），Frida 在登录后 hook，直接以任意参数调用 Cloud Function，绕过客户端校验。",
+    "sources_label": "Seep-Reverse-Lab / BSidesSF 2026",
+    "status": "candidate-light",
+    "entry_type": "method",
+    "suggested_category": "mobile-rev"
+  },
+  {
+    "cve": "CVE-2026-77698",
+    "title": "ManageEngine Endpoint Central local privilege escalation via agent upgrade",
+    "severity": "high",
+    "cvss": "8.8",
+    "epss": "",
+    "epss_date": "",
+    "product": "ManageEngine Endpoint Central",
+    "versions": "before 11.5.2600.19",
+    "impact": "high",
+    "impact_reason": "Local privilege escalation via DLL hijacking / patch scan",
+    "source_grade": "B",
+    "kev": false,
+    "first_seen": "2026-11-10",
+    "source_published": "2026-11-03",
+    "refs": [
+      "https://medium.com/@spoppi/how-scanning-for-patches-can-result-in-complete-system-compromise-0febd76656df"
+    ],
+    "aliases": [],
+    "observations": [
+      "Patch scan triggers JAR/DLL extraction, hijackable for local privilege escalation; fixed in 11.5.2600.19 Feb 2026"
+    ],
+    "cpe_clues": [],
+    "cwes": [
+      "CWE-427"
+    ],
+    "suggested_category": "binary-rev",
+    "desc": "补丁扫描触发 JAR/DLL 解压，可被劫持做本地提权（DLL 劫持）。CVSS 8.8（作者提议）。已在 Endpoint Central 11.5.2600.19 修复。",
+    "sources_label": "Medium / Sandro Poppi 2026-11-03",
+    "status": "candidate-light",
+    "entry_type": "vuln"
+  },
+  {
+    "cve": "CVE-2026-77699",
+    "title": "ManageEngine Endpoint Central local privilege escalation via DLL from untrusted path",
+    "severity": "high",
+    "cvss": "8.8",
+    "epss": "",
+    "epss_date": "",
+    "product": "ManageEngine Endpoint Central",
+    "versions": "before 11.5.2600.19",
+    "impact": "high",
+    "impact_reason": "Local privilege escalation via DLL hijacking / patch scan",
+    "source_grade": "B",
+    "kev": false,
+    "first_seen": "2026-11-10",
+    "source_published": "2026-11-03",
+    "refs": [
+      "https://medium.com/@spoppi/how-scanning-for-patches-can-result-in-complete-system-compromise-0febd76656df"
+    ],
+    "aliases": [],
+    "observations": [
+      "Patch scan triggers JAR/DLL extraction, hijackable for local privilege escalation; fixed in 11.5.2600.19 Feb 2026"
+    ],
+    "cpe_clues": [],
+    "cwes": [
+      "CWE-427"
+    ],
+    "suggested_category": "binary-rev",
+    "desc": "补丁扫描触发 JAR/DLL 解压，可被劫持做本地提权（DLL 劫持）。CVSS 8.8（作者提议）。已在 Endpoint Central 11.5.2600.19 修复。",
+    "sources_label": "Medium / Sandro Poppi 2026-11-03",
+    "status": "candidate-light",
+    "entry_type": "vuln"
+  },
+  {
+    "cve": "CVE-2026-85640",
+    "title": "ManageEngine Endpoint Central privilege escalation due to outdated component",
+    "severity": "high",
+    "cvss": "8.8",
+    "epss": "",
+    "epss_date": "",
+    "product": "ManageEngine Endpoint Central",
+    "versions": "before 11.5.2600.19",
+    "impact": "high",
+    "impact_reason": "Local privilege escalation via DLL hijacking / patch scan",
+    "source_grade": "B",
+    "kev": false,
+    "first_seen": "2026-11-10",
+    "source_published": "2026-11-03",
+    "refs": [
+      "https://medium.com/@spoppi/how-scanning-for-patches-can-result-in-complete-system-compromise-0febd76656df"
+    ],
+    "aliases": [],
+    "observations": [
+      "Patch scan triggers JAR/DLL extraction, hijackable for local privilege escalation; fixed in 11.5.2600.19 Feb 2026"
+    ],
+    "cpe_clues": [],
+    "cwes": [
+      "CWE-427"
+    ],
+    "suggested_category": "binary-rev",
+    "desc": "补丁扫描触发 JAR/DLL 解压，可被劫持做本地提权（DLL 劫持）。CVSS 8.8（作者提议）。已在 Endpoint Central 11.5.2600.19 修复。",
+    "sources_label": "Medium / Sandro Poppi 2026-11-03",
+    "status": "candidate-light",
+    "entry_type": "vuln"
+  }
+]

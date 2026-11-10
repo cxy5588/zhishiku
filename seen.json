@@ -1,0 +1,578 @@
+{
+  "CVE-2019-7238": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2019-9193": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-21972": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-29441": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-43798": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-0492": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-22954": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-27532": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-21626": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-37085": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-40711": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2018-13379": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2019-11510": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2019-19781": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2020-12812": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2020-5902": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-22986": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-1388": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-40684": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-35078": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-46805": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-48788": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-0012": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-0204": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-24919": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-3400": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-47575": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2017-0144": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2020-0688": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2020-1472": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-26855": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-34473": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-34527": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-42287": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-42321": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-30190": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-41040": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-21410": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-21413": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-45519": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2015-4852": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2016-4437": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2017-10271": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2017-5638": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-44228": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-1471": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-21449": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-22965": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-25845": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2017-12615": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2019-17558": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2019-2725": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2020-14882": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2020-1938": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-25646": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-26084": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-22947": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-22963": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-26134": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-22515": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-22518": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-22527": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-27350": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-42793": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-46604": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-50164": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-7028": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-23897": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-27198": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-38856": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-53677": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-3156": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-3493": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-4034": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-0185": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2022-0847": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-0386": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-22809": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-2640": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-32233": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-0582": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-1086": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2017-9841": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2018-7600": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2019-11043": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2019-16759": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-3129": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2021-41773": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-23752": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2023-6553": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-25600": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-27956": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2024-4577": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2018-20062": {
+    "date_added": "2026-11-10",
+    "source": "fujiang-baseline"
+  },
+  "CVE-2026-102895": {
+    "date_added": "2026-11-10",
+    "source": "CISA KEV（在野利用，自动采集，待核实）"
+  },
+  "CVE-2026-123158": {
+    "date_added": "2026-11-10",
+    "source": "CISA KEV（在野利用，自动采集，待核实）"
+  },
+  "CVE-2026-116779": {
+    "date_added": "2026-11-10",
+    "source": "CISA KEV（在野利用，自动采集，待核实）"
+  },
+  "CVE-2026-123218": {
+    "date_added": "2026-11-10",
+    "source": "CISA KEV（在野利用，自动采集，待核实）"
+  },
+  "CVE-2026-19868": {
+    "date_added": "2026-11-10",
+    "source": "CISA KEV（在野利用，自动采集，待核实）"
+  },
+  "CVE-2024-27834": {
+    "date_added": "2026-11-10",
+    "source": "CISA KEV（在野利用，自动采集，待核实）"
+  },
+  "CVE-2026-119977": {
+    "date_added": "2026-11-10",
+    "source": "CISA KEV（在野利用，自动采集，待核实）"
+  },
+  "CVE-2026-123551": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124580": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124450": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124469": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-107331": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124585": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-123549": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124427": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124445": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124560": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124577": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124079": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-125370": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-125383": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-125384": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124490": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-123531": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-123595": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-123596": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-123605": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124430": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124441": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124446": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124467": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124477": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124480": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124484": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124486": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-16283": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-12977": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-125400": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-125406": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124463": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-56712": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-119610": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124447": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124459": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124471": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124472": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124488": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-118904": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-95648": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  },
+  "CVE-2026-124001": {
+    "date_added": "2026-11-10",
+    "source": "NVD / CVE.org（自动采集，待核实）"
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "date": "2026-11-10 01:12 UTC",
+  "hours": 48,
+  "candidates": 50,
+  "written": [
+    {
+      "cve": "CVE-2026-102895",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-102895.md",
+      "severity": "critical",
+      "cvss": "",
+      "source": "CISA KEV（在野利用，自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123158",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-123158.md",
+      "severity": "critical",
+      "cvss": "",
+      "source": "CISA KEV（在野利用，自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-116779",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-116779.md",
+      "severity": "critical",
+      "cvss": "",
+      "source": "CISA KEV（在野利用，自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123218",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/linux-priv/cve-2026-123218.md",
+      "severity": "critical",
+      "cvss": "",
+      "source": "CISA KEV（在野利用，自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-19868",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/edge-device/cve-2026-19868.md",
+      "severity": "critical",
+      "cvss": "",
+      "source": "CISA KEV（在野利用，自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2024-27834",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2024-27834.md",
+      "severity": "critical",
+      "cvss": "",
+      "source": "CISA KEV（在野利用，自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-119977",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-119977.md",
+      "severity": "critical",
+      "cvss": "",
+      "source": "CISA KEV（在野利用，自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123551",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-123551.md",
+      "severity": "critical",
+      "cvss": "10.0",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124580",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124580.md",
+      "severity": "critical",
+      "cvss": "10.0",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124450",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124450.md",
+      "severity": "critical",
+      "cvss": "9.9",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124469",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124469.md",
+      "severity": "critical",
+      "cvss": "9.9",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-107331",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-107331.md",
+      "severity": "critical",
+      "cvss": "9.9",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124585",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124585.md",
+      "severity": "critical",
+      "cvss": "9.9",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123549",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-123549.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124427",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124427.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124445",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124445.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124560",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124560.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124577",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124577.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124079",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/java-deser/cve-2026-124079.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-125370",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-125370.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-125383",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-125383.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-125384",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-125384.md",
+      "severity": "critical",
+      "cvss": "9.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124490",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124490.md",
+      "severity": "critical",
+      "cvss": "9.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123531",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-123531.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123595",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-123595.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123596",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-123596.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-123605",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-123605.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124430",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124430.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124441",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124441.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124446",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124446.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124467",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124467.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124477",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124477.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124480",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124480.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124484",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124484.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124486",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124486.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-16283",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-16283.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-12977",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-12977.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-125400",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-125400.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-125406",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-125406.md",
+      "severity": "high",
+      "cvss": "8.8",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124463",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124463.md",
+      "severity": "high",
+      "cvss": "8.7",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-56712",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-56712.md",
+      "severity": "high",
+      "cvss": "8.5",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-119610",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/cloud-container/cve-2026-119610.md",
+      "severity": "high",
+      "cvss": "8.2",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124447",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124447.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124459",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124459.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124471",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124471.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124472",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124472.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124488",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/web-cms/cve-2026-124488.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-118904",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-118904.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-95648",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/linux-priv/cve-2026-95648.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    },
+    {
+      "cve": "CVE-2026-124001",
+      "file": "/home/hatch/workspace/knowledge-base/fujiang-pojia-knowledge/incoming/cve-2026-124001.md",
+      "severity": "high",
+      "cvss": "8.1",
+      "source": "NVD / CVE.org（自动采集，待核实）"
+    }
+  ],
+  "errors": []
+}
